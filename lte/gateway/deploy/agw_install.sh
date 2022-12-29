@@ -8,7 +8,7 @@ SUCCESS_MESSAGE="ok"
 NEED_REBOOT=0
 WHOAMI=$(whoami)
 KVERS=$(uname -r)
-MAGMA_VERSION="${MAGMA_VERSION:-v1.6.1-patch}"
+MAGMA_VERSION="${MAGMA_VERSION:-v1.6.1-patch.3}"
 CLOUD_INSTALL="cloud"
 GIT_URL="${GIT_URL:-https://github.com/logicsphere/magma.git}"
 
