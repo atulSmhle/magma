@@ -42,7 +42,7 @@ if ! grep -q 'Ubuntu' /etc/issue; then
 fi
 
 if [ "$SKIP_PRECHECK" != "$SUCCESS_MESSAGE" ]; then
-  wget https://raw.githubusercontent.com/magma/magma/"$MAGMA_VERSION"/lte/gateway/deploy/agw_pre_check_ubuntu.sh
+  wget https://raw.githubusercontent.com/logicsphere/magma/"$MAGMA_VERSION"/lte/gateway/deploy/agw_pre_check_ubuntu.sh
   if [[ -f ./agw_pre_check_ubuntu.sh ]]; then
     bash agw_pre_check_ubuntu.sh
     while true; do
@@ -205,7 +205,7 @@ if [ "$MAGMA_INSTALLED" != "$SUCCESS_MESSAGE" ]; then
   rm -rf /home/$MAGMA_USER/magma
 
   echo "AGW installation is done, Run agw_post_install_ubuntu.sh install script after reboot to finish installation"
-  wget https://raw.githubusercontent.com/magma/magma/"$MAGMA_VERSION"/lte/gateway/deploy/agw_post_install_ubuntu.sh -P /root/
+  wget https://raw.githubusercontent.com/logicsphere/magma/"$MAGMA_VERSION"/lte/gateway/deploy/agw_post_install_ubuntu.sh -P /root/
 
   reboot
 else
