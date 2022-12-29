@@ -24,9 +24,9 @@ DEPLOY_PATH="/home/$MAGMA_USER/magma/lte/gateway/deploy"
 SUCCESS_MESSAGE="ok"
 NEED_REBOOT=0
 WHOAMI=$(whoami)
-MAGMA_VERSION="${MAGMA_VERSION:-v1.6}"
+MAGMA_VERSION="${MAGMA_VERSION:-v1.6.1-patch}"
 CLOUD_INSTALL="cloud"
-GIT_URL="${GIT_URL:-https://github.com/magma/magma.git}"
+GIT_URL="${GIT_URL:-https://github.com/logicsphere/magma.git}"
 INTERFACE_DIR="/etc/network/interfaces.d"
 
 echo "Checking if the script has been executed by root user"

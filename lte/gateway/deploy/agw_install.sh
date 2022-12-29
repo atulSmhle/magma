@@ -8,9 +8,9 @@ SUCCESS_MESSAGE="ok"
 NEED_REBOOT=0
 WHOAMI=$(whoami)
 KVERS=$(uname -r)
-MAGMA_VERSION="${MAGMA_VERSION:-v1.5}"
+MAGMA_VERSION="${MAGMA_VERSION:-v1.6.1-patch}"
 CLOUD_INSTALL="cloud"
-GIT_URL="${GIT_URL:-https://github.com/magma/magma.git}"
+GIT_URL="${GIT_URL:-https://github.com/logicsphere/magma.git}"
 
 
 
@@ -21,7 +21,7 @@ if [ "$WHOAMI" != "root" ]; then
 fi
 
 if [ "$SKIP_PRECHECK" != "$SUCCESS_MESSAGE" ]; then
-  wget https://raw.githubusercontent.com/magma/magma/"$MAGMA_VERSION"/lte/gateway/deploy/agw_pre_check.sh
+  wget https://raw.githubusercontent.com/logicsphere/magma/"$MAGMA_VERSION"/lte/gateway/deploy/agw_pre_check.sh
   if [[ -f ./agw_pre_check.sh ]]; then
     chmod 644 agw_pre_check.sh && bash agw_pre_check.sh
     while true; do
