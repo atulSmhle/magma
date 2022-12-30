@@ -137,7 +137,7 @@
 
 - name: Set magma package variable
   set_fact:
-    magma_package: "{{ MAGMA_PACKAGE | default('magma=1.8.0*', true) }}"
+    magma_package: "{{ MAGMA_PACKAGE | default('magma=1.6.1*', true) }}"
 
 - name: Installing magma from local debian package
   become: true
